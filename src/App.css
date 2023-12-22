@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.root {
+  background: whitesmoke;
+}
+.App {
+  text-align: center;
+  font-family: 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+.note-div-all {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  border-bottom: 1px solid rgb(241,231,231);
+  border-radius: .3rem;
+  margin: .05rem auto;
+  width: 100%;
+  text-align: left;
+  padding: .2rem .5rem;
+  z-index: -3;
+}
+.note-div-all a{
+    text-decoration: none;
+}
+.note-div-all h3, span{
+    color: rgba(254, 198, 38, 1);
+}
+.note-div-all p {
+    text-align: right;
+    color: gray;
+    margin-right: .9rem;
+}
+.note-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+  width: 65%;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: .4rem;
+  background: whitesmoke;
+  display: block;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+.nav-links {
+    position: sticky;
+    top: 0;
+    padding: .5rem .75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14rem;
+    margin: 0 auto;
+    z-index: 100;
+    width: 100%;
+    background-color:#e2dbdbcf;
+}
+.note-div  .author >span {
+  color: rgba(254, 198, 38, 1);
+}
+.author {
+    font-size: .9rem;
+}
+.note-div a {
+  text-decoration: none;
+  color: rgba(253, 231, 76, 1);
+}
+.note-div a> h1,p,
+.nav-links a{
+  text-decoration: none;
+}
+.all-notes {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100vw;
+    webkit-transform-origin-x: 3s;
+    transition-behavior: smooth;
+    transition-duration: 6s;
+}
+.note-form {
+  margin-bottom: 20px;
+}
+.add-note{
+    font-weight: bold;
+}
+.note-list {
+  list-style: none;
+  padding: 0;
+}
+
+.note-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f4f4f4;
+}
+
+.note-item .title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.note-item .content {
+  color: #777;
+}
+.Add-note-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Add-note-input {
+}
+.note-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.note-form input,button {
+    border-radius: .5em;
+    margin: .5rem auto;
+    border: 2px solid whitesmoke;
+    box-shadow: 1px 1px 1px;
+}
+.note-form button {
+    padding: .6em;
+}
+.note-form input {
+    padding: 1em 1.5em;
+}
+.modify-note {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem auto 16rem;
+}
+.modify-note button{
+    padding: .75rem 3rem;
+}
+.note-div{
+    border: 1px solid rgba(254, 198, 38, 1);
+}
+.Add-note-input button{
+    border: 1px solid rgba(254, 198, 38, 1);
+    padding: .75rem 1rem;
+}
+.note-header,
+.note-div  h3{
+    color: rgba(254, 198, 38, 1);
+}
+.note-div  p{
+    margin-top: 1rem;
+    color: gray;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+.edit-btns{
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    margin-block-start: 1rem;
+}
+.edit-btns button{
+    border: 1px solid rgba(254, 198, 38, 1);
+    padding: .75rem 1.45rem;
+}
+.picker-container {
+  position: relative;
+  width: 300px;
+}
+.emoji-icon {
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  right: 5px;
+}
+.input-style {
+  padding: 7px 30px 7px 10px;
+  width: calc(100% - 40px);
+  border-radius: 3px;
+  border: 1px solid #999;
+  margin-bottom: 10px;
+}
+.content-editable{
+    display: flex;
+    justify-content: flex-start;
+    min-height: 6rem;
+    max-height: 8rem;
+    word-break: break-all;
+    width: 16rem;
+    border-radius: .5em;
+    margin-top: .2rem;
+    border: 2px solid whitesmoke;
+    box-shadow: 1px 1px 1px;
+    padding: .2rem .1rem;
+    overflow-y: scroll;
+}
+.fa-smile-o {
+    position: absolute; 
+    bottom: .2rem; 
+    right: -1.5rem;
+    font-size: 1.5rem;
+}
+.div-emoji-container{
+    position: relative;
+}
+.edit-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid gray;
+    width: 6rem;
+    height: auto;
+    border-radius: 4px;
+    padding: .62rem .47rem;
+    margin: auto;
+}
+.all-notes {
+  transition: transform 0.93s ease;
+  transform: translateX(-100%);
+}
+
+.all-notes.slide-in {
+  transform: translateX(0);
+  transition-behavior: smooth;
+  transition: transform 2s ease;
+}
+.fa-pencil-square-o{
+    font-size: 1.75rem;
+}
+.not-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    color: rgba(254, 198, 38, 1);
+}
+.page-not-found{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+.page-not-found h1{
+    margin-block-start: 10rem;
+}
+.page-not-found a{
+    text-decoration: none;
+    color: crimson;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+.no-note{
+    margin: 49% auto;
+    color: crimson;
+}
+.delete-btn{
+    color: Red;
+    font-weight: bold;
+}
